@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Manual Page Website</title>
+    <style>
+        body {
+            background-color: rgb(197, 197, 197);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            /* white-space: pre-wrap; */
+        }
+
+        .document {
+            background-color: rgb(230, 230, 230);
+            padding: 3em;
+            width: 70%;
+            margin: 0 auto;
+            box-shadow: 1px 1px 10px rgb(127, 127, 127, 0.1);
+            border-color: rgb(177, 177, 177);
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 700;
+            font-size: x-large;
+            color: rgb(93, 0, 0);
+            text-transform: uppercase;
+        }
+
+        .subheader {
+            text-transform: uppercase;
+            color: rgb(50, 0, 0);
+        }
+
+        pre {
+            font-size: 17px;
+            font-family: monospace;
+        }
+
+        b,
+        .highlight {
+            color: rgb(106, 37, 0)
+        }
+
+        .parameter {
+            color: rgb(1, 1, 126)
+        }
+
+        i {
+            color: green;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(78, 78, 255);
+            transition: all 1s ease-in-out;
+        }
+
+        a:hover {
+            color: rgb(255, 29, 29);
+            background-color: #ff212133;
+            text-decoration: underline;
+        }
+
+        img {
+            float: right;
+            width: 20%;
+            border-style: solid;
+            transition: all 1s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .author {
+            color: rgb(180, 180, 180);
+            text-transform: lowercase;
+            font-style: italic;
+            margin-left: 10%;
+        }
+
+        ._title {
+            font-style: normal;
+            color: green;
+            font-weight: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
+
+    <script>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</head>
+
+<body>
+    <div class="document">
+        <h1 class="_title">manual.css(1) - Manual styling for HTML</h1>
+
+        <pre class="author">Author: Kai D. Gonzalez (gkai70264@gmail.com)</pre>
+
+        <hr>
+
+        <h1>classes</h1>
+
+        <pre>
+            this css document contains classes which are used to
+            emulate the styles of manual page sites with a spin on
+            modern styling sheets.
+
+            <i>Classes</i>
+                <b>.document { ... } /* the basic outline of the manual document */</b>                             <img  src="mpfs.png"> <!-- image on the right (DO NOT FORMAT THIS) -->
+                
+                <b>.highlight { ... } /* changes the color to a more dark orange-red. 
+                                      This class is the default for &lt;b&gt; tags */</b>
+
+                <b>.parameter { ... } /* changes the text to a more <b class="parameter">blu-ish color.</b> */</b>
+                
+                <b>._title { ... } /* giant green title at the top of the document. */</b> 
+
+                <b>.author { ... } /* creates a foggy, inlined text for the
+                                   start of the document to give a nice structured 
+                                   author introduction. */</b>
+                
+                <b>.subheader { ... } /* <b class="subheader">an uppercase header.</b> */</b>
+            
+            these styles work off of <i>pre</i> tags and do not wrap inside 
+            of the main document. However you format text is how it will end
+            up looking on paper. the main document contains lower width and
+            rounded corners, with a slight shadow in the back, with <b>0.1</b> 
+            opacity.
+
+            As you can see to the right, the image is floated to that direction
+            to give the right sided effect of a typical newsletter, which many
+            other online manual pages do not support, this one does. The images
+            also contain animations when you hover over them, using a smooth API
+            they can easily be customized and edited with the touch of a few
+            keys.
+
+            the styling is heavily inspired by lua.org, the main website styles.
+            With a hint of <a href="https://man7.org">man7.org</a>, <a
+            href="https://manpage.io">manpage.io</a>, and <a
+            href="https://linux.die.net">linux.die.net</a>
+            but edited to support a bit more scalable formatting and a modern
+            spin on old documentation.
+        </pre>
+
+        <h1>supported tags</h1>
+
+        <pre>
+            The supported tags are as follows:
+
+                    <b>Regular Highlight</b>
+                    <b class="parameter">Parameter</b>
+                    <i>Italic Green</i>
+                    <b class="subheader">subheader (forces uppercase)</b>
+                    <a href="example.com">Link [example.com]</a>
+                    Regular Images (see above)
+                    <span class="author">Author (forces lowercase) - Lightly credited</span>
+        </pre>
+    </div>
+</body>
+
+</html>
